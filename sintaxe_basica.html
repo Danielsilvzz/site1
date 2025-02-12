@@ -1,41 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<title>perfil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sobre HTML, CSS e JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e2e2e2;
+        }
+
+        button.correct {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button.incorrect {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
 </head>
-<style>
-    body{
-        background-color: darkslategray;
-    }
-
-    *{
-        padding: 0;
-        margin: 0;
-    }
-
-    header{
-        background-color: darkgray;
-    }
-    h1{
-        text-align: center;
-        padding: 5px 0;
-        font-size: 65px;
-    }
-    p{
-        font-size: 55px;
-        text-align: center;
-    }
-    h2{
-        font-size: 45px;   
-        text-align: center;
-    }
-</style>
 <body>
-<Header><h1>Daniel porn.silva</h1></Header>
+    <div class="quiz-container">
+        <h1>Quiz sobre HTML, CSS e JavaScript</h1>
+        
+        <!-- HTML Questions -->
+        <section>
+            <h2>Questões sobre HTML</h2>
+            <div class="question">
+                <p>1. O que significa HTML?</p>
+                <button class="answer" data-correct="true">HyperText Markup Language</button>
+                <button class="answer" data-correct="false">HyperText Machine Language</button>
+                <button class="answer" data-correct="false">Home Tool Markup Language</button>
+            </div>
+            <div class="question">
+                <p>2. Qual tag é usada para links?</p>
+                <button class="answer" data-correct="true">&lt;a&gt;</button>
+                <button class="answer" data-correct="false">&lt;link&gt;</button>
+                <button class="answer" data-correct="false">&lt;href&gt;</button>
+            </div>
+            <div class="question">
+                <p>3. Qual tag é usada para títulos?</p>
+                <button class="answer" data-correct="true">&lt;h1&gt;</button>
+                <button class="answer" data-correct="false">&lt;header&gt;</button>
+                <button class="answer" data-correct="false">&lt;title&gt;</button>
+            </div>
+            <div class="question">
+                <p>4. Qual tag é usada para imagens?</p>
+                <button class="answer" data-correct="true">&lt;img&gt;</button>
+                <button class="answer" data-correct="false">&lt;picture&gt;</button>
+                <button class="answer" data-correct="false">&lt;image&gt;</button>
+            </div>
+            <div class="question">
+                <p>5. Como você cria uma lista não ordenada em HTML?</p>
+                <button class="answer" data-correct="true">&lt;ul&gt;</button>
+                <button class="answer" data-correct="false">&lt;ol&gt;</button>
+                <button class="answer" data-correct="false">&lt;li&gt;</button>
+            </div>
+        </section>
 
-<section>
-    <h2>sobre mim:</h2>
-    <p>oiii</p>
-</section>
+        <!-- CSS Questions -->
+        <section>
+            <h2>Questões sobre CSS</h2>
+            <div class="question">
+                <p>1. Como você aplica uma cor de fundo em CSS?</p>
+                <button class="answer" data-correct="true">background-color</button>
+                <button class="answer" data-correct="false">bg-color</button>
+                <button class="answer" data-correct="false">color-background</button>
+            </div>
+            <div class="question">
+                <p>2. Qual propriedade CSS altera o tamanho da fonte?</p>
+                <button class="answer" data-correct="true">font-size</button>
+                <button class="answer" data-correct="false">font-style</button>
+                <button class="answer" data-correct="false">text-size</button>
+            </div>
+            <div class="question">
+                <p>3. Como você alinha texto ao centro em CSS?</p>
+                <button class="answer" data-correct="true">text-align: center</button>
+                <button class="answer" data-correct="false">align-text: center</button>
+                <button class="answer" data-correct="false">center-text: true</button>
+            </div>
+            <div class="question">
+                <p>4. Qual é a propriedade usada para definir a margem externa em CSS?</p>
+                <button class="answer" data-correct="true">margin</button>
+                <button class="answer" data-correct="false">padding</button>
+                <button class="answer" data-correct="false">border</button>
+            </div>
+            <div class="question">
+                <p>5. Como você faz um texto em negrito em CSS?</p>
+                <button class="answer" data-correct="true">font-weight: bold</button>
+                <button class="answer" data-correct="false">font-style: bold</button>
+                <button class="answer" data-correct="false">font-variant: bold</button>
+            </div>
+        </section>
+
+        <!-- JavaScript Questions -->
+        <section>
+            <h2>Questões sobre JavaScript</h2>
+            <div class="question">
+                <p>1. Como você declara uma variável em JavaScript?</p>
+                <button class="answer" data-correct="true">let</button>
+                <button class="answer" data-correct="false">variable</button>
+                <button class="answer" data-correct="false">variate</button>
+            </div>
+            <div class="question">
+                <p>2. Qual função exibe uma mensagem no console?</p>
+                <button class="answer" data-correct="true">console.log()</button>
+                <button class="answer" data-correct="false">print()</button>
+                <button class="answer" data-correct="false">log.console()</button>
+            </div>
+            <div class="question">
+                <p>3. Como você cria uma função em JavaScript?</p>
+                <button class="answer" data-correct="true">function nomeDaFuncao()</button>
+                <button class="answer" data-correct="false">create function nomeDaFuncao()</button>
+                <button class="answer" data-correct="false">def nomeDaFuncao()</button>
+            </div>
+            <div class="question">
+                <p>4. O que faz o comando 'alert()' em JavaScript?</p>
+                <button class="answer" data-correct="true">Exibe uma caixa de diálogo com uma mensagem</button>
+                <button class="answer" data-correct="false">Exibe uma mensagem no console</button>
+                <button class="answer" data-correct="false">Altera o conteúdo de um elemento</button>
+            </div>
+            <div class="question">
+                <p>5. O que significa 'DOM' em JavaScript?</p>
+                <button class="answer" data-correct="true">Document Object Model</button>
+                <button class="answer" data-correct="false">Document Online Model</button>
+                <button class="answer" data-correct="false">Data Object Model</button>
+            </div>
+        </section>
+
+    </div>
+    
+    <script>
+        // Função para lidar com a resposta do usuário
+        document.querySelectorAll('.answer').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remover classes anteriores
+                button.parentElement.querySelectorAll('button').forEach(btn => {
+                    btn.classList.remove('correct', 'incorrect');
+                });
+
+                // Verificar se a resposta é correta
+                if (button.getAttribute('data-correct') === 'true') {
+                    button.classList.add('correct');
+                } else {
+                    button.classList.add('incorrect');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
